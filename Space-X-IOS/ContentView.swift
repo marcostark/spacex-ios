@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(networkManager.launchers) { launch in
-                NavigationLink(destination: Text(launch.mission_name)) {
+                NavigationLink(destination: LaunchDetails(details: launch.mission_name)) {
                     HStack {
                         Image(systemName: "photo")
                             .resizable()
